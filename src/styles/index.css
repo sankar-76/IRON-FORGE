@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: #FF5000;
+    --brand-light: #FF6B1A;
+    --brand-dark: #CC4000;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FF5000;
+    border-radius: 2px;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(255, 80, 0, 0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Typography */
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  .font-cond {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  /* Grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 80, 0, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 80, 0, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Brand glow effect */
+  .glow-brand {
+    box-shadow: 0 0 30px rgba(255, 80, 0, 0.4), 0 0 60px rgba(255, 80, 0, 0.1);
+  }
+
+  /* Card hover lift */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(255, 80, 0, 0.2);
+  }
+
+  /* Nav link underline animation */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FF5000;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply font-cond text-sm font-semibold tracking-[0.3em] uppercase text-[#FF5000] flex items-center gap-3 mb-4;
+  }
+  .section-label::before,
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #FF5000;
+    flex-shrink: 0;
+  }
+  .section-label--left::after {
+    display: none;
+  }
+  .section-label--left::before {
+    display: block;
+  }
+
+  /* Section title */
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.04em;
+    font-size: clamp(44px, 6vw, 80px);
+    line-height: 1;
+    color: #fff;
+  }
+
+  /* Btn primary */
+  .btn-primary {
+    @apply font-cond font-bold tracking-widest text-sm uppercase px-8 py-4 rounded bg-[#FF5000] text-white transition-all duration-200;
+  }
+  .btn-primary:hover {
+    background: #FF6B1A;
+  }
+
+  /* Btn outline */
+  .btn-outline {
+    @apply font-cond font-bold tracking-widest text-sm uppercase px-8 py-4 rounded border border-white/20 text-white transition-all duration-200;
+  }
+  .btn-outline:hover {
+    border-color: #FF5000;
+    color: #FF5000;
+  }
+
+  /* Tag badge */
+  .tag-badge {
+    @apply font-cond text-xs font-semibold tracking-widest uppercase text-orange-400 bg-orange-950/50 px-3 py-1 rounded-full border border-orange-900/50;
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full bg-white/5 border border-orange-900/30 text-white rounded-lg px-4 py-3 font-body text-sm outline-none transition-colors duration-200;
+    font-family: 'Barlow', sans-serif;
+  }
+  .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .form-input:focus {
+    border-color: #FF5000;
+  }
+
+  /* Hero radial gradient bg */
+  .hero-bg {
+    background:
+      radial-gradient(ellipse at 65% 50%, rgba(255, 80, 0, 0.14) 0%, transparent 60%),
+      radial-gradient(ellipse at 15% 80%, rgba(255, 80, 0, 0.07) 0%, transparent 50%);
+  }
+
+  /* Marquee wrapper */
+  .marquee-wrapper {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 28s linear infinite;
+  }
+  .marquee-wrapper:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+  .text-brand {
+    color: #FF5000;
+  }
+  .bg-brand {
+    background-color: #FF5000;
+  }
+  .border-brand {
+    border-color: #FF5000;
+  }
+}
