@@ -1,3 +1,5 @@
+// data.js or /data/index.js
+
 export const NAV_LINKS = ['Home', 'About', 'Programs', 'Trainers', 'Pricing', 'Contact']
 
 export const STATS = [
@@ -69,6 +71,7 @@ export const TRAINERS = [
     gradient: 'from-orange-900 to-red-900',
     certifications: ['NSCA-CSCS', 'USAW Level 2'],
     clients: 340,
+    imageUrl: 'https://images.pexels.com/photos/4164772/pexels-photo-4164772.jpeg?auto=compress&cs=tinysrgb&w=1200'
   },
   {
     name: 'Aisha Patel',
@@ -79,6 +82,7 @@ export const TRAINERS = [
     gradient: 'from-purple-900 to-indigo-900',
     certifications: ['ACE-CPT', 'Precision Nutrition'],
     clients: 280,
+    imageUrl: 'https://images.pexels.com/photos/3768913/pexels-photo-3768913.jpeg?auto=compress&cs=tinysrgb&w=1200'
   },
   {
     name: 'Ryo Tanaka',
@@ -89,6 +93,7 @@ export const TRAINERS = [
     gradient: 'from-zinc-800 to-neutral-900',
     certifications: ['IMMAF Coach', 'AIBA Level 2'],
     clients: 190,
+    imageUrl: 'https://images.pexels.com/photos/260447/pexels-photo-260447.jpeg?auto=compress&cs=tinysrgb&w=1200'
   },
   {
     name: 'Sara Voss',
@@ -99,6 +104,7 @@ export const TRAINERS = [
     gradient: 'from-teal-900 to-emerald-900',
     certifications: ['RYT-500', 'Anatomy Trains'],
     clients: 215,
+    imageUrl: 'https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=1200'
   },
 ]
 
