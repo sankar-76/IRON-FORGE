@@ -2,6 +2,7 @@
 
 A fully responsive, production-grade gym website built with **React 18**, **Tailwind CSS 3**, and **GSAP 3**.
 
+
 ---
 
 ## ✨ Features
