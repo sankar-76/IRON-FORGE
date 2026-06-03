@@ -65,6 +65,8 @@ npm install
 
 ### 2. Start the dev server
 
+## to run the command 
+
 ```bash
 npm run dev
 ```
