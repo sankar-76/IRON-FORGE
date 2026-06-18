@@ -13,7 +13,6 @@ A fully responsive, production-grade gym website built with **React 18**, **Tail
 - **Clean folder structure** — components, hooks, data, styles all separated
 - 
 ---
-
 ## 📂 Project Structure
 
 ```
