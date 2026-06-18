@@ -11,7 +11,7 @@ A fully responsive, production-grade gym website built with **React 18**, **Tail
 - **Working contact form** — React state with success feedback
 - **Custom scrollbar**, font pairing (Bebas Neue + Barlow), brand color system
 - **Clean folder structure** — components, hooks, data, styles all separated
-
+- 
 ---
 
 ## 📂 Project Structure
